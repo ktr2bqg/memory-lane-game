@@ -4,11 +4,11 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #3a5a40;
+  background-color: #0077b6;
 }
 
 h1 {
-  color: #dad7cd;
+  color: #caf0f8;
   font-family: monospace;
 }
 
@@ -21,6 +21,7 @@ h1 {
   align-content: flex-start;
   flex-wrap: wrap;
   column-gap: 0em;
+  margin: 0%;
 }
 
 .items {
@@ -34,6 +35,15 @@ h1 {
   text-align: center;
   border-radius: none;
   border-style: solid;
-  border-color: #344e41;
-  background-color: #dad7cd ;
+  border-color: #90e0ef;
+  background-color: #caf0f8 ;
+}
+
+.playBtn {
+  font-family: monospace;
+  color: #caf0f8;
+  padding: 20px;
+  margin-top: 0%;
+  background-color: #03045e;
+  border: none;
 }
