@@ -1,8 +1,7 @@
 body {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   height: 100vh;
   background-color: #0077b6;
 }
@@ -13,25 +12,22 @@ h1 {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5);
   width: 52%;
   height: 700px;
-  margin: 0 auto;
+  margin: auto;
   border: 10px none;
-  display: flex;
-  align-content: flex-start;
-  flex-wrap: wrap;
   column-gap: 0em;
   margin: 0%;
 }
 
 .items {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
   width: 100px;
   height: 150px;
   font-size: 2em;
+  margin-left: 10px;
   text-align: center;
   border-radius: none;
   border-style: solid;
