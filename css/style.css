@@ -3,12 +3,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #0077b6;
+  background-color: #344e41;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-h1, h2 {
-  color: #caf0f8;
+h1 {
+  color: white;
   font-family: monospace;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,6 +25,7 @@ h1, h2 {
   height: 400px;
   margin: auto;
   border: 10px none;
+  background-color: none;
   column-gap: 0em;
   margin: 0%;
 }
@@ -34,8 +38,8 @@ h1, h2 {
   text-align: center;
   border-radius: none;
   border-style: solid;
-  border-color: #90e0ef;
-  background-color: #caf0f8 ;
+  border-color: #588157;
+  background-color: #edb409 ;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -43,18 +47,21 @@ h1, h2 {
 }
 
 .back {
-  background-color: #03045e;
+  background-color: #588157;
+  background-image: url("../images/y2kpinkpurp.jpeg");
   cursor: pointer;
-  transition: transform 1s ;
+  transition-duration: 1s;
 }
 
 .back:hover {
-background-color: #caf0f8;
-transform: rotateY(-180deg);
+background-color: #edb409;
+transform: rotateY(180deg);
+transition-duration: 1s;
+background-image: url("../images/90spinkheart.jpg");
 }
 
 .front {
-  color: #caf0f8;
+  color: #588157;
   display: flex;
   justify-content: center;
 }
@@ -64,6 +71,6 @@ transform: rotateY(-180deg);
   color: #caf0f8;
   padding: 20px;
   margin-top: 0%;
-  background-color: #03045e;
+  background-color: #edb409;
   border: none;
 }
