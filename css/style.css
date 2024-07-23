@@ -48,16 +48,16 @@ h1 {
 
 .back {
   background-color: #588157;
-  background-image: url("../images/y2kpinkpurp.jpeg");
+  /*background-image: url("../images/y2kpinkpurp.jpeg");*/
   cursor: pointer;
-  transition-duration: 1s;
+  transition: 1s;
 }
 
 .back:hover {
 background-color: #edb409;
 transform: rotateY(180deg);
-transition-duration: 1s;
-background-image: url("../images/90spinkheart.jpg");
+transition: 1s;
+/*background-image: url("../images/90spinkheart.jpg");*/
 }
 
 .front {

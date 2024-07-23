@@ -1,57 +1,44 @@
 /*------Constants------*/ 
-
+const cardEls = document.querySelectorAll('.cards')
+const resetBtn = document.getElementById('reset')
+const messageEl = document.querySelector('h2')
 
 
 
 /*------Variables------*/
 let board;
 let winner;
+let cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+let turn = 1;
 /*------Cached Element References------*/
 
-
 /*------Event Listeners------*/
-
-
-
-/*------Functions------*/
-init();
-
-// caches all of the card elements in a variable
-const cardEls = document.querySelectorAll('cards')
-const resetBtn = document.getElementById('reset')
-const messageEl = document.querySelector('h2')
-
-// adds an event listener to each card element
-cardEls.forEach(cardEl => {
-  cardEl.addEventListener('click', handleClickCard)
+cardEls.forEach((cardEl) => {
+    console.log(cardEl.id);
+    console.log(parseInt(cardEl.id) +1);
+    //console.log(cards[cardEl.id]);
+    cardEl.className = `cards back ${cards[cardEl.id]}`;
+    cardEl.addEventListener("click", handleClickCard);
 })
-
-// declare a state variable to hold the info regarding the cards
-let cards = 
-    [ "1","2","3","4","5",
-    "6","7","8", "9","10",]
-
+/*------Functions------*/
 init()
 
 function init() {
- cards = 
-    [ "1","2","3","4","5",
-    "6","7","8", "9","10",]
-    turn = "";
+    cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+    turn = 1;
     winner = false;
     render()
 };
 
-function render() {
-  cardEls.forEach(cardEl => {
-    // code to change the cardEl (HTML) to reflect the state in cardVals
-  })
+function render() {  
 }
-
-function handleClickCard() {
-  // user interaction changes state of cardVals in some way
-  // then renders the updated state
-  render()
+ 
+function handleClickCard(event) {
+    if (turn === 1) {
+        selectedCard1 = playingCards[cardEls.id]
+        return turn = 2
+    } else {
+        selectedCard2 = playingCards[cardEls.id]
+        return turn = 1
+    }
 }
-
-
