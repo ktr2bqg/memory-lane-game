@@ -10,6 +10,8 @@ let board;
 let winner;
 let cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 let turn = 1;
+let selectedCard1;
+let selectedCard2;
 /*------Cached Element References------*/
 
 /*------Event Listeners------*/
@@ -25,20 +27,30 @@ init()
 
 function init() {
     cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-    turn = 1;
+    turn = 0;
     winner = false;
     render()
 };
 
-function render() {  
+function render() {
+    randomizeCards()
 }
- 
+
+function randomizeCards() {
+ const randomIdx = Math.floor(Math.random() * cards.length);
+  userChoice = cards[randomIdx];
+    }
+    
+console.log(userChoice);
+
 function handleClickCard(event) {
-    if (turn === 1) {
-        selectedCard1 = playingCards[cardEls.id]
+    if (turn === 0) {
+        selectedCard1 = cards[cardEls.id]
         return turn = 2
     } else {
-        selectedCard2 = playingCards[cardEls.id]
+        selectedCard2 = cards[cardEls.id]
         return turn = 1
     }
 }
+
+function compareCards() {}
