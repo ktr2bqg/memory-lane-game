@@ -6,24 +6,27 @@ body {
   background-color: #0077b6;
 }
 
-h1 {
+h1, h2 {
   color: #caf0f8;
   font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5);
-  width: 52%;
-  height: 700px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2);
+  width: 50%;
+  height: 400px;
   margin: auto;
   border: 10px none;
   column-gap: 0em;
   margin: 0%;
 }
 
-.items {
+.cards {
   width: 100px;
   height: 150px;
   font-size: 2em;
@@ -33,6 +36,27 @@ h1 {
   border-style: solid;
   border-color: #90e0ef;
   background-color: #caf0f8 ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: auto;
+}
+
+.back {
+  background-color: #03045e;
+  cursor: pointer;
+  transition: transform 1s ;
+}
+
+.back:hover {
+background-color: #caf0f8;
+transform: rotateY(-180deg);
+}
+
+.front {
+  color: #caf0f8;
+  display: flex;
+  justify-content: center;
 }
 
 .playBtn {
