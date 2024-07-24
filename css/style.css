@@ -16,7 +16,16 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-
+h2 {
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  margin: 0%;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -54,17 +63,17 @@ h1 {
 }
 
 .back:hover {
-background-color: #edb409;
+background-color: #edb409;}
 transform: rotateY(180deg);
 transition: 1s;
-/*background-image: url("../images/90spinkheart.jpg");*/
-}
+/*background-image: url("../images/90spinkheart.jpg");}*/
 
-.front {
+
+/*.front {
   color: #588157;
   display: flex;
   justify-content: center;
-}
+}*/
 
 .playBtn {
   font-family: monospace;

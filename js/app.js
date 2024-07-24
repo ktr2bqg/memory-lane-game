@@ -1,56 +1,49 @@
-/*------Constants------*/ 
-const cardEls = document.querySelectorAll('.cards')
-const resetBtn = document.getElementById('reset')
-const messageEl = document.querySelector('h2')
-
-
+/*------Constants------*/
+const cardsEls = document.querySelectorAll(".cards");
+console.log(cardsEls);
+const messageEl = document.querySelector("h2");
+console.log(messageEl);
+const playBtn = document.getElementById("playBtn");
+console.log(playBtn);
 
 /*------Variables------*/
-let board;
 let winner;
-let cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-let turn = 1;
-let selectedCard1;
-let selectedCard2;
-/*------Cached Element References------*/
+console.log(winner);
+let playerChoice;
+console.log(playerChoice)
 
-/*------Event Listeners------*/
-cardEls.forEach((cardEl) => {
-    console.log(cardEl.id);
-    console.log(parseInt(cardEl.id) +1);
-    //console.log(cards[cardEl.id]);
-    cardEl.className = `cards back ${cards[cardEl.id]}`;
-    cardEl.addEventListener("click", handleClickCard);
-})
 /*------Functions------*/
-init()
+init();
 
 function init() {
-    cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-    turn = 0;
-    winner = false;
-    render()
-};
-
-function render() {
-    randomizeCards()
+  cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  winner = false
+  turn = 0;
 }
+console.log(cards);
 
-function randomizeCards() {
- const randomIdx = Math.floor(Math.random() * cards.length);
-  userChoice = cards[randomIdx];
-    }
-    
-console.log(userChoice);
-
-function handleClickCard(event) {
-    if (turn === 0) {
-        selectedCard1 = cards[cardEls.id]
-        return turn = 2
-    } else {
-        selectedCard2 = cards[cardEls.id]
-        return turn = 1
-    }
-}
+function render() {}
+render();
 
 function compareCards() {}
+compareCards();
+
+function clickCard() {
+}
+clickCard();
+
+/*------Event Listeners------*/
+playBtn.addEventListener('click', function() {
+    console.log('Button was clicked!')
+})
+playBtn.click()
+
+cardsEls.forEach((cardEl) => {
+  //console.log(cardEl.id);
+  //console.log(parseInt(cardEl.id) + 1);
+  //console.log(cards[cardEl.id]);
+  cardEl.className = `cards back ${cards[cardEl.id]}`;
+  cardEl.addEventListener("click", function() {
+    console.log('Card was Clicked!')
+    })
+})
