@@ -11,6 +11,7 @@ let winner;
 console.log(winner);
 let playerChoice;
 console.log(playerChoice)
+let cards;
 
 /*------Functions------*/
 init();
@@ -18,7 +19,7 @@ init();
 function init() {
   cards = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   winner = false
-  turn = 0;
+  turn = '';
 }
 console.log(cards);
 
@@ -28,9 +29,31 @@ render();
 function compareCards() {}
 compareCards();
 
-function clickCard() {
+function clickCard(evt) {
+       const cardIdx = parseInt(evt.target.id)
+       console.log(cardIdx);
+       showCard(cardIdx)
+    }
+
+function showCard(idx) {
+    cardsEls[idx].classList.remove("facedown")
+    cardsEls[idx].classList.add(cards[idx])
+    cardsEls[idx].classList.add("faceup")
+    cardsEls[idx].style.backgroundColor = 'red';
 }
-clickCard();
+
+function flippedCard() {
+  if (showCard === 'red') {
+   } else 
+  return 
+}
+
+
+function randomizeCards() {
+ const randomIdx = Math.floor(Math.random() * cards.length);
+   shuffledCards = cardsEls[randomIdx];
+   console.log(shuffledCards)
+}
 
 /*------Event Listeners------*/
 playBtn.addEventListener('click', function() {
@@ -39,11 +62,5 @@ playBtn.addEventListener('click', function() {
 playBtn.click()
 
 cardsEls.forEach((cardEl) => {
-  //console.log(cardEl.id);
-  //console.log(parseInt(cardEl.id) + 1);
-  //console.log(cards[cardEl.id]);
-  cardEl.className = `cards back ${cards[cardEl.id]}`;
-  cardEl.addEventListener("click", function() {
-    console.log('Card was Clicked!')
-    })
-})
+  cardEl.addEventListener("click", clickCard);
+});
